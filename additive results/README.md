@@ -276,13 +276,13 @@ We set $x^\star(s)=\mathrm{cos}\left(1+5\mathrm e^s+3\mathrm{sin}^2(2\pi s)\righ
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"></th>
-    <th class="tg-c3ow" colspan="12">Table EC4: The optimization results with $n=10$ and $n=50$</th>
+    <th class="tg-c3ow" colspan="12">Table EC4: The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization</th>
   </tr></thead>
 <tbody>
   <tr>
     <td class="tg-c3ow"></td>
-    <td class="tg-c3ow" colspan="6">$n=10$</td>
-    <td class="tg-baqh" colspan="6">$n=50$</td>
+    <td class="tg-c3ow" colspan="6">FFGP training</td>
+    <td class="tg-c3ow" colspan="6">Robust optimization</td>
   </tr>
   <tr>
     <td class="tg-c3ow"></td>
@@ -403,71 +403,349 @@ Let $\boldsymbol{\beta}(t,s)=s[\mathrm{sin}(6\pi t)+3\mathrm{cos}(\pi t^2)]$, $F
 **Table EC8:** The average training time of 50 replicates and the runtime for robust optimization with different sample sizes when $\lambda=0.01$ in Scenario \ref{exam3} are provided in Table \ref{time3}. It can be seen that the runtime of training the FFGP and finding robust solutions based on the FRGD algorithm is the shortest. The proposed method has a better performance compared to other baselines.
 
 
-    \caption{The MSE for different kernels with $n=150$ in Scenario \ref{exam3}.}
-          
-     $k_x$ $k_y$ FFGP VFGP FVGP VVGP SpeD-GP
-    ``Gaussian" ``Exponential" 0.0040 0.5959 0.2537 \textbf{0.1867} 0.6887\\   
-    ``Gaussian" ``Wiener" 0.0240 \textbf{0.5958} 0.2275 0.2061 \textbf{0.6236}
-    ``Mat\'ern" ``Exponential" \textbf{0.0017} 0.6605 0.2278 0.1986 0.6312  
-    ``Mat\'ern" ``Wiener" 0.0221 0.6491 \textbf{0.2177} 0.2046 0.6267
+   <table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow" colspan="7">Table EC7: The MSE for different kernels with $n=150$ in Scenario EC2</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">$k_x$</td>
+    <td class="tg-c3ow">$k_y$</td>
+    <td class="tg-c3ow">FFGP</td>
+    <td class="tg-c3ow">VFGP</td>
+    <td class="tg-c3ow">FVGP</td>
+    <td class="tg-c3ow">VVGP</td>
+    <td class="tg-c3ow">SpeD-GP</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">``Gaussian"</td>
+    <td class="tg-c3ow">``Exponential"</td>
+    <td class="tg-c3ow">0.0040</td>
+    <td class="tg-c3ow">0.5959</td>
+    <td class="tg-c3ow">0.2537</td>
+    <td class="tg-7btt">0.1867</td>
+    <td class="tg-c3ow">0.6887</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">``Gaussian"</td>
+    <td class="tg-c3ow">``Wiener"</td>
+    <td class="tg-c3ow">0.0240</td>
+    <td class="tg-7btt">0.5958</td>
+    <td class="tg-c3ow">0.2275</td>
+    <td class="tg-c3ow">0.2061</td>
+    <td class="tg-7btt">0.6236</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">``Mat&eacutern"</td>
+    <td class="tg-c3ow">``Exponential"</td>
+    <td class="tg-7btt">0.0017</td>
+    <td class="tg-c3ow">0.6605</td>
+    <td class="tg-c3ow">0.2278</td>
+    <td class="tg-c3ow">0.1986</td>
+    <td class="tg-c3ow">0.6312</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">``Mat&eacutern"</td>
+    <td class="tg-c3ow">``Wiener"</td>
+    <td class="tg-c3ow">0.0221</td>
+    <td class="tg-c3ow">0.6491</td>
+    <td class="tg-7btt">0.2177</td>
+    <td class="tg-c3ow">0.2046</td>
+    <td class="tg-c3ow">0.6267</td>
+  </tr>
+</tbody></table>
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow" colspan="8">Table EC6: The MMSE (standard deviation) of the testing set of 50 replicates in Scenario EC2</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">$n$</td>
+    <td class="tg-c3ow">$\lambda$</td>
+    <td class="tg-c3ow">FFGP</td>
+    <td class="tg-c3ow">VFGP</td>
+    <td class="tg-c3ow">FVGP</td>
+    <td class="tg-c3ow">VVGP</td>
+    <td class="tg-c3ow">SpeD-GP</td>
+    <td class="tg-baqh">SCR</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" rowspan="2">30</td>
+    <td class="tg-baqh">0.01</td>
+    <td class="tg-amwm">0.0075 (0.0015)</td>
+    <td class="tg-baqh">0.5957 (0.0036)</td>
+    <td class="tg-baqh">0.2430 (0.0032)</td>
+    <td class="tg-baqh">0.2555 (0.0033)</td>
+    <td class="tg-baqh">0.6717 (0.0029)</td>
+    <td class="tg-baqh">0.0124 (0.0015)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1</td>
+    <td class="tg-amwm">0.1670 (0.0275)</td>
+    <td class="tg-baqh">0.5957 (0.0342)</td>
+    <td class="tg-baqh">0.4628 (0.0482)</td>
+    <td class="tg-baqh">0.4711 (0.0476)</td>
+    <td class="tg-baqh">0.7217 (0.0287)</td>
+    <td class="tg-baqh">0.2975 (0.0298)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="2">60</td>
+    <td class="tg-c3ow">0.01</td>
+    <td class="tg-7btt">0.0043 (0.0005)</td>
+    <td class="tg-c3ow">0.5958 (0.0034)</td>
+    <td class="tg-c3ow">0.2466 (0.0032)</td>
+    <td class="tg-c3ow">0.2585 (0.0030)</td>
+    <td class="tg-c3ow">0.7370 (0.0017)</td>
+    <td class="tg-baqh">0.0113 (0.0012)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1</td>
+    <td class="tg-amwm">0.1492 (0.0252)</td>
+    <td class="tg-baqh">0.5958 (0.0224)</td>
+    <td class="tg-baqh">0.3088 (0.0350)</td>
+    <td class="tg-baqh">0.4054 (0.0364)</td>
+    <td class="tg-baqh">0.7656 (0.0277)</td>
+    <td class="tg-baqh">0.1641 (0.0264)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" rowspan="2">90</td>
+    <td class="tg-baqh">0.01</td>
+    <td class="tg-amwm">0.0021 (0.0002)</td>
+    <td class="tg-baqh">0.5958 (0.0028)</td>
+    <td class="tg-baqh">0.2161 (0.0023)</td>
+    <td class="tg-baqh">0.1962 (0.0026)</td>
+    <td class="tg-baqh">0.7022 (0.0037)</td>
+    <td class="tg-baqh">0.0073 (0.0007)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1</td>
+    <td class="tg-amwm">0.0836 (0.0113)</td>
+    <td class="tg-baqh">0.5958 (0.0201)</td>
+    <td class="tg-baqh">0.2771 (0.0255)</td>
+    <td class="tg-baqh">0.3929 (0.0298)</td>
+    <td class="tg-baqh">0.7339 (0.0321)</td>
+    <td class="tg-baqh">0.1459 (0.0187)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" rowspan="2">120</td>
+    <td class="tg-baqh">0.01</td>
+    <td class="tg-amwm">0.0019 (0.0002)</td>
+    <td class="tg-baqh">0.5958 (0.0028)</td>
+    <td class="tg-baqh">0.2309 (0.0027)</td>
+    <td class="tg-baqh">0.2058 (0.0030)</td>
+    <td class="tg-baqh">0.7201 (0.0018)</td>
+    <td class="tg-baqh">0.0063 (0.0007)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-7btt">0.0664 (0.0093)</td>
+    <td class="tg-c3ow">0.5958 (0.0264)</td>
+    <td class="tg-c3ow">0.2962 (0.0303)</td>
+    <td class="tg-c3ow">0.4305 (0.0362)</td>
+    <td class="tg-c3ow">0.7383 (0.0187)</td>
+    <td class="tg-baqh">0.1397 (0.0177)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="2">150</td>
+    <td class="tg-c3ow">0.01</td>
+    <td class="tg-7btt">0.0017 (0.0002)</td>
+    <td class="tg-c3ow">0.5958 (0.0027)</td>
+    <td class="tg-c3ow">0.2181 (0.0021)</td>
+    <td class="tg-c3ow">0.1869 (0.0020)</td>
+    <td class="tg-c3ow">0.6220 (0.0020)</td>
+    <td class="tg-baqh">0.0068 (0.0006)</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-7btt">0.0411 (0.0084)</td>
+    <td class="tg-c3ow">0.5958 (0.0193)</td>
+    <td class="tg-c3ow">0.2331 (0.0126)</td>
+    <td class="tg-c3ow">0.2450 (0.0146)</td>
+    <td class="tg-c3ow">0.6265 (0.0098)</td>
+    <td class="tg-baqh">0.1150 (0.0119)</td>
+  </tr>
+</tbody></table>
+
+    <table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-c3ow" colspan="12">Table EC7: The optimization results with $n=30$ and $n=150$</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow" colspan="6">$n=30$</td>
+    <td class="tg-c3ow" colspan="6">$n=50$</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow">FFGP</td>
+    <td class="tg-c3ow">VFGP</td>
+    <td class="tg-c3ow">FVGP</td>
+    <td class="tg-c3ow">VVGP</td>
+    <td class="tg-c3ow">SpeD-GP</td>
+    <td class="tg-c3ow">SCR</td>
+    <td class="tg-c3ow">FFGP</td>
+    <td class="tg-c3ow">VFGP</td>
+    <td class="tg-c3ow">FVGP</td>
+    <td class="tg-c3ow">VVGP</td>
+    <td class="tg-c3ow">SpeD-GP</td>
+    <td class="tg-c3ow">SCR</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">IAE</td>
+    <td class="tg-7btt">0.1158</td>
+    <td class="tg-c3ow">0.2050</td>
+    <td class="tg-c3ow">0.3934</td>
+    <td class="tg-c3ow">0.4969</td>
+    <td class="tg-c3ow">0.8884</td>
+    <td class="tg-c3ow">0.3436</td>
+    <td class="tg-7btt">0.0043</td>
+    <td class="tg-c3ow">0.0115</td>
+    <td class="tg-c3ow">0.0199</td>
+    <td class="tg-c3ow">0.4590</td>
+    <td class="tg-c3ow">0.8598</td>
+    <td class="tg-c3ow">0.0095</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$L_b$</td>
+    <td class="tg-7btt">0.0127</td>
+    <td class="tg-c3ow">0.2922</td>
+    <td class="tg-c3ow">0.0612</td>
+    <td class="tg-c3ow">0.0216</td>
+    <td class="tg-c3ow">0.0297</td>
+    <td class="tg-c3ow">0.0214</td>
+    <td class="tg-7btt">0.0055</td>
+    <td class="tg-c3ow">0.0201</td>
+    <td class="tg-c3ow">0.0327</td>
+    <td class="tg-c3ow">0.3540</td>
+    <td class="tg-c3ow">0.0964</td>
+    <td class="tg-c3ow">0.0065</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$L_v$</td>
+    <td class="tg-7btt">0.0073</td>
+    <td class="tg-c3ow">0.0514</td>
+    <td class="tg-c3ow">0.0131</td>
+    <td class="tg-c3ow">0.0752</td>
+    <td class="tg-c3ow">0.9101</td>
+    <td class="tg-c3ow">NA</td>
+    <td class="tg-7btt">0.0044</td>
+    <td class="tg-c3ow">0.0050</td>
+    <td class="tg-c3ow">0.0187</td>
+    <td class="tg-c3ow">20.5023</td>
+    <td class="tg-c3ow">0.0331</td>
+    <td class="tg-c3ow">NA</td>
+  </tr>
+</tbody></table>
 
 
 
-    \caption{The MMSE (standard deviation) of the testing set of 50 replicates in Scenario \ref{exam3}.}
-              
-    $n$ $\lambda$ FFGP VFGP FVGP VVGP SpeD-GP SCR
-    {30} 0.01 \textbf{0.0075(0.0015)} 0.5957(0.0036) 0.2430(0.0032) 0.2555(0.0033) 0.6717(0.0029) 0.0124(0.0015) 
-    1 \textbf{0.1670(0.0275)} 0.5957(0.0342) 0.4628(0.0482) 0.4711(0.0476) 0.7217(0.0287) 0.2975(0.0298)
-    {60} 0.01 \textbf{0.0043(0.0005)} 0.5958(0.0034) 0.2466(0.0032) 0.2585(0.0030) 0.7370(0.0017) 0.0113(0.0012)
-    1 \textbf{0.1492 (0.0252)}& 0.5958 (0.0224)& 0.3088 (0.0350) & 0.4054 (0.0364)& 0.7656 (0.0277)&0.1641 (0.0264)\\
-    \midrule    
-    \multirow{2}{*}{90}&0.01&\textbf{0.0021 (0.0002)}&0.5958 (0.0028)&0.2161 (0.0023)& 0.1962 (0.0026)&0.7022 (0.0037)& 0.0073 (0.0007)\\ 
-    &1&\textbf{0.0836 (0.0113)} &0.5958 (0.0201)& 0.2771 (0.0255)& 0.3929 (0.0298)& 0.7339 (0.0321)& 0.1459 (0.0187)\\
-    \midrule       
-    \multirow{2}{*}{120}&0.01&\textbf{0.0019 (0.0002)} &0.5958 (0.0028)& 0.2309 (0.0027)&0.2058 (0.0030)&0.7201 (0.0018)&0.0063 (0.0007)\\  
-    &1&\textbf{0.0664 (0.0093)}& 0.5958 (0.0264)& 0.2962 (0.0303)& 0.4305 (0.0362)&0.7383 (0.0187)& 0.1397 (0.0177)\\
-    \midrule     
-    \multirow{2}{*}{150}&0.01&\textbf{0.0017 (0.0002)}& 0.5958 (0.0027)&0.2181 (0.0021)&0.1869 (0.0020)&0.6220 (0.0020)&0.0068 (0.0006)\\ 
-    &1&\textbf{0.0411 (0.0084)}& 0.5958 (0.0193)& 0.2331 (0.0126)& 0.2450 (0.0146)&0.6265 (0.0098)& 0.1150 (0.0119)\\
-    \bottomrule
-    \end{tabular}}
-    \label{s3-mmse}
-\end{table}
-{\color{red}}
 
-
-    \caption{The optimization results with $n=30$ and $n=150$ in Scenario \ref{exam3}.}
-    \multirow{2}{*}{}&\multicolumn{6}{c}{$n=30$} &\multicolumn{6}{c}{$n=150$}\\
-
-    FFGP VFGP FVGP VVGP SpeD-GP SCR FFGP VFGP FVGP VVGP SpeD-GP SCR
-    IAE \textbf{0.1158} 0.2050 0.3934 0.4969 0.8884 0.3436 \textbf{0.0043} 0.0115 0.0199 0.4590 0.8598 0.0095   
-    $L_b$ \textbf{0.0127} 0.2922 0.0612 0.0216 0.0297 0.0214 \textbf{0.0055} 0.0201 0.0327 0.3540 0.0964 0.0065
-    $L_v$ \textbf{0.0073} 0.0514 0.0131 0.0752 0.9101 NA \textbf{0.0044} 0.0050 0.0187 20.5023 0.0331 NA
-
-
-
-{\color{blue}}
-\begin{table}[!ht]
-\color{red}
-    \caption{The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization in Scenario \ref{exam1}.}
-    \centering
-    \scalebox{0.85}{
-    \begin{tabular}{ccccccccccccc}
-    \toprule 
-    \multirow{2}{*}{}&\multicolumn{6}{c}{FFGP training} &\multicolumn{6}{c}{Robust optimization}\\
-    \cmidrule(r){2-7} \cmidrule(r){8-13}
-    &FFGP&VFGP&FVGP&VVGP&SpeD-GP&SCR&FFGP&VFGP&FVGP&VVGP&SpeD-GP&SCR \\
-    \midrule
-    $n=30$&\textbf{53.01}&  63.22& 344.07& 175.64  & 319.54& 732.01&\textbf{214.32} &1191.84 &1601.37&  896.14&   817.80& 2619.51\\   
-    $n=60$&\textbf{171.81}&   183.50 &1831.63 & 896.56&   718.56& 1503.74&-& -& -& -& - &-\\
-    $n=90$&\textbf{401.41}&412.13&6027.72& 5294.21&3163.05 &1767.33&-& -& -& -& - &-\\
-    $n=120$&\textbf{617.24}&669.82&27380.98&22825.31 &19741.98 &1769.15&-& -& -& -& - &-\\
-    $n=150$&\textbf{955.16}&958.70&35598.08 & 33250.98&31445.86 &3104.00& \textbf{274.69}&1429.53&4482.31&1424.01&1298.12&3601.18\\  
-    \bottomrule
-    \end{tabular}}
-    \label{time3}
-\end{table} 
-{\color{blue}}
+   <table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-c3ow" colspan="12">Table EC8: The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow" colspan="6">FFGP training</td>
+    <td class="tg-c3ow" colspan="6">Robust optimization</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow">FFGP</td>
+    <td class="tg-c3ow">VFGP</td>
+    <td class="tg-c3ow">FVGP</td>
+    <td class="tg-c3ow">VVGP</td>
+    <td class="tg-c3ow">SpeD-GP</td>
+    <td class="tg-c3ow">SCR</td>
+    <td class="tg-c3ow">FFGP</td>
+    <td class="tg-c3ow">VFGP</td>
+    <td class="tg-c3ow">FVGP</td>
+    <td class="tg-c3ow">VVGP</td>
+    <td class="tg-c3ow">SpeD-GP</td>
+    <td class="tg-c3ow">SCR</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$n=30$</td>
+    <td class="tg-7btt">53.01</td>
+    <td class="tg-c3ow">63.22</td>
+    <td class="tg-c3ow">344.07</td>
+    <td class="tg-c3ow">175.64</td>
+    <td class="tg-c3ow">319.54</td>
+    <td class="tg-c3ow">732.01</td>
+    <td class="tg-7btt">214.32</td>
+    <td class="tg-c3ow">1191.84</td>
+    <td class="tg-c3ow">1601.37</td>
+    <td class="tg-c3ow">896.14</td>
+    <td class="tg-c3ow">817.80</td>
+    <td class="tg-c3ow">56.83</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$n=60$</td>
+    <td class="tg-7btt">171.81</td>
+    <td class="tg-c3ow">183.50</td>
+    <td class="tg-c3ow">1831.63</td>
+    <td class="tg-c3ow">896.56</td>
+    <td class="tg-c3ow">718.56</td>
+    <td class="tg-c3ow">1503.74</td>
+    <td class="tg-7btt">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$n=90$</td>
+    <td class="tg-7btt">401.41</td>
+    <td class="tg-c3ow">412.13</td>
+    <td class="tg-c3ow">6027.72</td>
+    <td class="tg-c3ow">5294.21</td>
+    <td class="tg-c3ow">3163.05</td>
+    <td class="tg-c3ow">1767.33</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-7btt">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$n=120$</td>
+    <td class="tg-7btt">617.24</td>
+    <td class="tg-c3ow">669.82</td>
+    <td class="tg-c3ow">27380.98</td>
+    <td class="tg-c3ow">22825.31</td>
+    <td class="tg-c3ow">19741.98</td>
+    <td class="tg-c3ow">1769.15</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+    <td class="tg-c3ow">-</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">$n=150$</td>
+    <td class="tg-7btt">955.16</td>
+    <td class="tg-c3ow">958.70</td>
+    <td class="tg-c3ow">35598.08</td>
+    <td class="tg-c3ow">33250.98</td>
+    <td class="tg-c3ow">31445.86</td>
+    <td class="tg-c3ow">3104.00</td>
+    <td class="tg-7btt">274.69</td>
+    <td class="tg-c3ow">1429.53</td>
+    <td class="tg-c3ow">4482.31</td>
+    <td class="tg-c3ow">1424.01</td>
+    <td class="tg-c3ow">1298.12</td>
+    <td class="tg-c3ow">3601.18</td>
+  </tr>
+</tbody></table>
 
 
 
