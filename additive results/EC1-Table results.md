@@ -203,13 +203,13 @@
   </tr>
   <tr>
     <td class="tg-c3ow">IAE</td>
-    <td class="tg-7btt">0.0101</td>
+    <td class="tg-7btt"><b>0.0101</td>
     <td class="tg-c3ow">0.3774</td>
     <td class="tg-c3ow">0.0505 </td>
     <td class="tg-c3ow">0.9178</td>
     <td class="tg-c3ow">0.4995</td>
     <td class="tg-c3ow">0.2307</td>
-    <td class="tg-1wig">0.0003</td>
+    <td class="tg-1wig"><b>0.0003</td>
     <td class="tg-0lax">0.0099</td>
     <td class="tg-0lax">0.0009</td>
     <td class="tg-0lax">0.0179</td>
@@ -218,13 +218,13 @@
   </tr>
   <tr>
     <td class="tg-c3ow">$L_b$</td>
-    <td class="tg-7btt">0.0042</td>
+    <td class="tg-7btt"><b>0.0042</td>
     <td class="tg-c3ow">0.2146</td>
     <td class="tg-c3ow">0.0106</td>
     <td class="tg-c3ow">0.0102</td>
     <td class="tg-c3ow">0.5116</td>
     <td class="tg-c3ow">0.0375</td>
-    <td class="tg-1wig">0.0033</td>
+    <td class="tg-1wig"><b>0.0033</td>
     <td class="tg-0lax">0.0177</td>
     <td class="tg-0lax">0.0107</td>
     <td class="tg-0lax">0.0101</td>
@@ -236,13 +236,13 @@
     <td class="tg-c3ow">0.0038</td>
     <td class="tg-c3ow">0.2268</td>
     <td class="tg-c3ow">0.0198 </td>
-    <td class="tg-7btt">0.0029</td>
+    <td class="tg-7btt"><b>0.0029</td>
     <td class="tg-c3ow">0.6311</td>
     <td class="tg-c3ow">NA</td>
     <td class="tg-0lax">0.0008</td>
     <td class="tg-0lax">0.0878</td>
     <td class="tg-0lax">0.0034</td>
-    <td class="tg-1wig">0.0001</td>
+    <td class="tg-1wig"><b>0.0001</td>
     <td class="tg-0lax">0.5743</td>
     <td class="tg-0lax">NA</td>
   </tr>
@@ -281,13 +281,13 @@
   </tr>
   <tr>
     <td class="tg-c3ow">$n=10$</td>
-    <td class="tg-7btt">4.12</td>
+    <td class="tg-7btt"><b>4.12</td>
     <td class="tg-c3ow">11.34</td>
     <td class="tg-c3ow">12.50</td>
     <td class="tg-c3ow">12.79</td>
     <td class="tg-c3ow">6.76</td>
     <td class="tg-c3ow">317.57</td>
-    <td class="tg-amwm">18.67</td>
+    <td class="tg-amwm"><b>18.67</td>
     <td class="tg-baqh">21.86</td>
     <td class="tg-baqh">25.19</td>
     <td class="tg-baqh">58.37</td>
@@ -296,7 +296,7 @@
   </tr>
   <tr>
     <td class="tg-c3ow">$n=20$</td>
-    <td class="tg-7btt">16.56</td>
+    <td class="tg-7btt"><b>16.56</td>
     <td class="tg-c3ow">74.86</td>
     <td class="tg-c3ow">54.69</td>
     <td class="tg-c3ow">47.47</td>
@@ -311,7 +311,7 @@
   </tr>
   <tr>
     <td class="tg-c3ow">$n=30$</td>
-    <td class="tg-7btt">38.41</td>
+    <td class="tg-7btt"><b>38.41</td>
     <td class="tg-c3ow">89.04</td>
     <td class="tg-c3ow">182.28</td>
     <td class="tg-c3ow">132.69</td>
@@ -326,7 +326,7 @@
   </tr>
   <tr>
     <td class="tg-baqh">$n=40$</td>
-    <td class="tg-amwm">67.02</td>
+    <td class="tg-amwm"><b>67.02</td>
     <td class="tg-baqh">119.28</td>
     <td class="tg-baqh">342.22</td>
     <td class="tg-baqh">326.50</td>
@@ -341,13 +341,13 @@
   </tr>
   <tr>
     <td class="tg-baqh">$n=50$</td>
-    <td class="tg-amwm">101.42</td>
+    <td class="tg-amwm"><b>101.42</td>
     <td class="tg-baqh">134.50</td>
     <td class="tg-baqh">1663.86</td>
     <td class="tg-baqh">698.00</td>
     <td class="tg-baqh">1449.34</td>
     <td class="tg-baqh">521.89</td>
-    <td class="tg-amwm">26.17</td>
+    <td class="tg-amwm"><b>26.17</td>
     <td class="tg-baqh">33.61</td>
     <td class="tg-baqh">391.90</td>
     <td class="tg-baqh">1622.36</td>
