@@ -355,3 +355,60 @@
     <td class="tg-baqh">86.41</td>
   </tr>
 </tbody></table>
+
+
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow" colspan="6">Table EC5: The MSE for different settings of $\tau_x$ and $\tau_y$ with $n=50$</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">$\tau_x$: below,&nbsp;&nbsp; $\tau_y$: right</td>
+    <td class="tg-c3ow">0.5</td>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-c3ow">1.5</td>
+    <td class="tg-c3ow">2</td>
+    <td class="tg-c3ow">2.5</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">0.5</td>
+    <td class="tg-7btt">0.0397</td>
+    <td class="tg-c3ow">0.0114</td>
+    <td class="tg-c3ow">0.0079</td>
+    <td class="tg-c3ow">0.0069</td>
+    <td class="tg-c3ow">0.0065</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">1</td>
+    <td class="tg-7btt">0.0395</td>
+    <td class="tg-c3ow">0.0114</td>
+    <td class="tg-c3ow">0.0079</td>
+    <td class="tg-c3ow">0.0069</td>
+    <td class="tg-c3ow">0.0065</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">1.5</td>
+    <td class="tg-7btt">0.0394</td>
+    <td class="tg-c3ow">0.0114</td>
+    <td class="tg-c3ow">0.0079</td>
+    <td class="tg-c3ow">0.0069</td>
+    <td class="tg-c3ow">0.0065</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">2</td>
+    <td class="tg-7btt">0.0394</td>
+    <td class="tg-c3ow">0.0113</td>
+    <td class="tg-c3ow">0.0079</td>
+    <td class="tg-c3ow">0.0069</td>
+    <td class="tg-c3ow">0.0065</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">2.5</td>
+    <td class="tg-7btt">0.0393</td>
+    <td class="tg-c3ow">0.0113</td>
+    <td class="tg-c3ow">0.0079</td>
+    <td class="tg-c3ow">0.0069</td>
+    <td class="tg-c3ow">0.0065</td>
+  </tr>
+</tbody></table>
