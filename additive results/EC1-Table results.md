@@ -3,7 +3,7 @@
 <div style="text-align: center;">
 <table class="tg"><thead>
   <tr>
-    <th class="tg-c3ow" colspan="7">Table EC1: The MSE ($\times 10^{-1}$) for different kernels with $n=50$ in Scenario EC1</th>
+    <th class="tg-c3ow" colspan="7">Table EC1: The MSE ($\times 10^{-1}$) for different kernels with $n=50$</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -60,7 +60,7 @@
 
 <table class="tg"><thead>
   <tr>
-    <th class="tg-c3ow" colspan="8">Table EC2: The MMSE (standard deviation) of the testing set of 50 replicates in Scenario EC1</th>
+    <th class="tg-c3ow" colspan="8">Table EC2: The MMSE (standard deviation) of the testing set of 50 replicates</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -178,7 +178,7 @@
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"></th>
-    <th class="tg-c3ow" colspan="12">Table EC3: The optimization results with $n=10$ and $n=50$ in Scenario EC1</th>
+    <th class="tg-c3ow" colspan="12">Table EC3: The optimization results with $n=10$ and $n=50$</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -256,7 +256,7 @@
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"></th>
-    <th class="tg-c3ow" colspan="12">Table EC4: The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization in Scenario EC1</th>
+    <th class="tg-c3ow" colspan="12">Table EC4: The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization</th>
   </tr></thead>
 <tbody>
   <tr>
