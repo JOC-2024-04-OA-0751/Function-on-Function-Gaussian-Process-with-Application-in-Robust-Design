@@ -1,11 +1,8 @@
-#
+# Table Results in Scenario EC2
 
-
-
-
-   <table class="tg"><thead>
+<table class="tg"><thead>
   <tr>
-    <th class="tg-c3ow" colspan="7">Table EC7: The MSE for different kernels with $n=150$ in Scenario EC2</th>
+    <th class="tg-c3ow" colspan="7">Table EC5: The MSE for different kernels with $n=150$</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -56,9 +53,10 @@
 </tbody></table>
 
 
+
 <table class="tg"><thead>
   <tr>
-    <th class="tg-c3ow" colspan="8">Table EC6: The MMSE (standard deviation) of the testing set of 50 replicates in Scenario EC2</th>
+    <th class="tg-c3ow" colspan="8">Table EC6: The MMSE (standard deviation) of the testing set of 50 replicates</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -168,7 +166,9 @@
   </tr>
 </tbody></table>
 
-    <table class="tg"><thead>
+
+
+<table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"></th>
     <th class="tg-c3ow" colspan="12">Table EC7: The optimization results with $n=30$ and $n=150$</th>
@@ -244,7 +244,7 @@
 
 
 
-   <table class="tg"><thead>
+ <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"></th>
     <th class="tg-c3ow" colspan="12">Table EC8: The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization</th>
