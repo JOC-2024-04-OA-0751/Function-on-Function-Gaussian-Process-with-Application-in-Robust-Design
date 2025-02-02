@@ -31,6 +31,7 @@ The `EC1-Table results` file includes four tables. The detailed description of d
 | Table EC2   | The MMSE (standard deviation) of the testing set of 50 replicates|
 | Table EC3   | The optimization results with $n=10$ and $n=50$|
 | Table EC4   | The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization|
+| Table EC5   | The MSE for different settings of $\tau_x$ and $\tau_y$ with $n=50$|
 
 
 ### The figure results in Scenario EC1
@@ -53,10 +54,10 @@ The `EC2-Table results` file contains four tables. The detailed description of d
 
 | Table Name        | Description                             |
 | ---------------- | --------------------------------------- |
-| Table EC5   | The MSE for different kernels with $n=150$|
-| Table EC6   | The MMSE (standard deviation) of the testing set of 50 replicates|
-| Table EC7   | The optimization results with $n=30$ and $n=150$|
-| Table EC8   | The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization|
+| Table EC6   | The MSE for different kernels with $n=150$|
+| Table EC7   | The MMSE (standard deviation) of the testing set of 50 replicates|
+| Table EC8   | The optimization results with $n=30$ and $n=150$|
+| Table EC9   | The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization|
 
 
 ### The figure results in Scenario EC2
@@ -65,3 +66,15 @@ The `EC2-Table results` file contains four tables. The detailed description of d
 | ---------------- | --------------------------------------- |
 | `Figure EC3`   | The prediction using the FFGP, VFGP, FVGP, VVGP, SpeD-GP, and SCR estimator, respectively, together with their corresponding point-wise 95\%-credible intervals (in the shaded area) when $n = 150$|
 | `Figure EC4`   | The absolute error of optimal input and output estimated by different methods with $n=150$|
+
+
+
+## Robust Optimization Analysis
+For better illustration, we provide the optimal functional input parameter and the corresponding output compared to the target input and output, as seen in Figures EC5-EC8.
+
+| File Name        | Description                             |
+| -------------------- | --------------------------------------- |
+|`Figure EC5`| The optimal input and output estimated by different methods with $n=50$ in Scenario 5.1|
+|`Figure EC6`| The optimal input and output estimated by different methods with $n=50$ in Scenario EC1|
+| `Figure EC7`   | The optimal input and output estimated by different methods with $n=50$ in Scenario EC2|
+| `Figure EC8`   | The optimal structure of metamaterial and the corresponding stress-strain curve of different methods in the case study|
