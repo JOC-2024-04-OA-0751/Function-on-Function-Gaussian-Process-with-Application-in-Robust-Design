@@ -78,3 +78,7 @@ For better illustration, we provide the optimal functional input parameter and t
 |`Figure EC6`| The optimal input and output estimated by different methods with $n=50$ in Scenario EC1|
 | `Figure EC7`   | The optimal input and output estimated by different methods with $n=50$ in Scenario EC2|
 | `Figure EC8`   | The optimal structure of metamaterial and the corresponding stress-strain curve of different methods in the case study|
+
+
+## `MSD Results`
+The `MSD Results` file contains the table of the mean standard deviation (MSD) of 50 replicates for different methods in all Scenarios.
