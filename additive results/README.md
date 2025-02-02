@@ -22,7 +22,19 @@ The detailed setting of different baselines is as follows:
 **Scenario EC1:** Assume $x$ is a GP with mean zero and covariance function $\mathrm{cov}(x(s),x(s'))=\mathrm{exp}\lbrace -100(s-s')^2\rbrace$. Let $\mu_0(t)=\mathrm{log}(1+t)$ and $\beta(t,s)=3\sqrt{s}\mathrm{cos}(2\pi t)$. We generate different trajectories of the GP as $x_i$, and the corresponding $y_i(t)=\mu_0(t)+\int_0^1  \beta(t,s)x_i(s)ds+\varepsilon_i(t)$, here $\varepsilon_i(t)\sim \mathrm{N}(0,0.1^2\mathrm{I}_y)$, $i=1,\cdots,n$.
 We set $x^\star(s)=\mathrm{cos}\left(1+5\mathrm e^s+3\mathrm{sin}^2(2\pi s)\right)$, and the desired output $y^\star=f(x^\star)$.
 
-### The table results in Scenario EC1
+### EC1-Table results
+
+| File Name        | Description                             |
+| ---------------- | --------------------------------------- |
+| Figure_EC1.pdf   | The prediction using the FFGP, VFGP, FVGP, VVGP, SpeD-GP, and SCR estimator, respectively, together with their corresponding point-wise 95\%-credible intervals (in the shaded area) when $n = 50$.  |
+| Figure_EC2.pdf   | The absolute error of the FFGP is the smallest for inputs and outputs, indicating that the optimized $\hat{x}$ by FFGP is almost the same as the optimal $x^{\star}$ with a tiny difference. Its corresponding estimated $\hat{y}$ is also the closest to the optimal $y^{\star}$ among all the baselines. |
+
+
+
+
+
+
+
 
 **Table EC1:** We employ the proposed MSE criterion to select the optimal kernel as the correlation function for $x$, as shown in Table EC1. It can be seen that the optimal combination of FFGP is the Mat\'ern kernel with $\nu=5/2$ for $k_x$ and the exponential kernel for $k_y$. Additionally, FFGP has the smallest MSE compared to baselines with their corresponding optimal kernel combinations.
 
