@@ -16,7 +16,7 @@
     <td class="tg-0pky">SCR</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="5">Scenario 5.1</td>
+    <td class="tg-0pky" rowspan="5">1-D nonlinear model</td>
     <td class="tg-0pky">$n=10$</td>
     <td class="tg-0pky">0.7947</td>
     <td class="tg-0pky">0.8084</td>
@@ -62,7 +62,7 @@
     <td class="tg-0pky">0.1431</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="5">Scenario EC1</td>
+    <td class="tg-0pky" rowspan="5">1-D linear model</td>
     <td class="tg-0pky">$n=10$</td>
     <td class="tg-0pky">0.4592</td>
     <td class="tg-0pky">4.5315</td>
@@ -108,7 +108,7 @@
     <td class="tg-c3ow">0.0482</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="5">Scenario EC2</td>
+    <td class="tg-c3ow" rowspan="5">3-D nonlinear model</td>
     <td class="tg-0pky">$n=30$</td>
     <td class="tg-0pky">0.3882</td>
     <td class="tg-c3ow">2.3299</td>
