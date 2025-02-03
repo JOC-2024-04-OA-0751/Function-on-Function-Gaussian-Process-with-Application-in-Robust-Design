@@ -1,4 +1,4 @@
-# Additive Results
+# Additional Results
 ## The Detailed Setting
 The detailed setting of different baselines is as follows:
 
