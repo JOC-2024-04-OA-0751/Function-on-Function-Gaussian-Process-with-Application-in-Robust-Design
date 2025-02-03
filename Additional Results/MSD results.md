@@ -1,4 +1,4 @@
-## The Mean Standard Deviation (MSD) of 50 replicates
+## The Mean Standard Deviation (MSD) Results
 
 <table class="tg"><thead>
   <tr>
