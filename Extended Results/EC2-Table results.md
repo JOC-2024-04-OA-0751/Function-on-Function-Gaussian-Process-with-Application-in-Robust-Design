@@ -1,4 +1,4 @@
-# Table results 3-D nonlinear model
+# Table results of the 3-D nonlinear model
 
 <table class="tg"><thead>
   <tr>
