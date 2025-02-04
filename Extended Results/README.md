@@ -80,5 +80,5 @@ For better illustration, we provide the optimal functional input parameter and t
 | `Figure EC8`   | The optimal structure of metamaterial and the corresponding stress-strain curve of different methods in the case study|
 
 
-## `MSD Results`
-The `MSD Results` file contains the table of the mean standard deviation (MSD) of 50 replicates for different methods for the 1-D nonlinear model, the 1-D linear model, and the 3-D nonlinear model.
+## `MSD results`
+The `MSD results` file contains the table of the mean standard deviation (MSD) of 50 replicates for different methods for the 1-D nonlinear model, the 1-D linear model, and the 3-D nonlinear model.
