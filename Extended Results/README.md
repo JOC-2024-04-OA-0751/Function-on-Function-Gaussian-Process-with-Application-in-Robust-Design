@@ -1,4 +1,4 @@
-# Additional Results
+# Extended Results
 ## The Detailed Setting
 The detailed setting of different baselines is as follows:
 
@@ -19,11 +19,11 @@ The detailed setting of different baselines is as follows:
 [3]: Qi X, Luo R (2019) Nonlinear function-on-function additive model with multiple predictor curves. Statistica Sinica 29(2):719–739.
 
 ## 1-D Linear Model
-**Scenario EC1:** Assume $x$ is a GP with mean zero and covariance function $\mathrm{cov}(x(s),x(s'))=\mathrm{exp}\lbrace -100(s-s')^2\rbrace$. Let $\mu_0(t)=\mathrm{log}(1+t)$ and $\beta(t,s)=3\sqrt{s}\mathrm{cos}(2\pi t)$. We generate different trajectories of the GP as $x_i$, and the corresponding $y_i(t)=\mu_0(t)+\int_0^1  \beta(t,s)x_i(s)ds+\varepsilon_i(t)$, here $\varepsilon_i(t)\sim \mathrm{N}(0,0.1^2\mathrm{I}_y)$, $i=1,\cdots,n$.
+Assume $x$ is a GP with mean zero and covariance function $\mathrm{cov}(x(s),x(s'))=\mathrm{exp}\lbrace -100(s-s')^2\rbrace$. Let $\mu_0(t)=\mathrm{log}(1+t)$ and $\beta(t,s)=3\sqrt{s}\mathrm{cos}(2\pi t)$. We generate different trajectories of the GP as $x_i$, and the corresponding $y_i(t)=\mu_0(t)+\int_0^1  \beta(t,s)x_i(s)ds+\varepsilon_i(t)$, here $\varepsilon_i(t)\sim \mathrm{N}(0,0.1^2\mathrm{I}_y)$, $i=1,\cdots,n$.
 We set $x^\star(s)=\mathrm{cos}\left(1+5\mathrm e^s+3\mathrm{sin}^2(2\pi s)\right)$, and the desired output $y^\star=f(x^\star)$.
 
 ### `EC1-Table results`
-The `EC1-Table results` file includes four tables. The detailed description of different tables is as follows:
+The `EC1-Table results` file includes four tables for the 1-D linear model. The detailed description of different tables is as follows:
 
 | Table Name        | Description                             |
 | ---------------- | --------------------------------------- |
@@ -34,7 +34,7 @@ The `EC1-Table results` file includes four tables. The detailed description of d
 | Table EC5   | The MSE for different settings of $\tau_x$ and $\tau_y$ with $n=50$|
 
 
-### The figure results in Scenario EC1
+### The figure results for the 1-D linear model
 
 | File Name        | Description                             |
 | ---------------- | --------------------------------------- |
@@ -45,7 +45,7 @@ The `EC1-Table results` file includes four tables. The detailed description of d
 
 
 ## 3-D Nonlinear Model
-**Scenario EC2:** Consider $x(s)=(x_1,x_2,x_3)^T$ as a three-dimensional functional vector in $\Omega_x=[0,1]$. Assume $x_i(s)$ is identical and independent GP with mean zero and covariance function $\mathrm{cov}(x(s),x(s'))=\mathrm{exp}\lbrace-100(s-s')^2\rbrace$, where $s\in\Omega_x$ and $i=1,2,3$.
+Consider $x(s)=(x_1,x_2,x_3)^T$ as a three-dimensional functional vector in $\Omega_x=[0,1]$. Assume $x_i(s)$ is identical and independent GP with mean zero and covariance function $\mathrm{cov}(x(s),x(s'))=\mathrm{exp}\lbrace-100(s-s')^2\rbrace$, where $s\in\Omega_x$ and $i=1,2,3$.
 Let $\boldsymbol{\beta}(t,s)=s[\mathrm{sin}(6\pi t)+3\mathrm{cos}(\pi t^2)]$, $F_1(s,t,x_1)=(s+t)x_1$, $F_2(s,t,x_2)=\sqrt(st)x_2$, and $F_3(s,t,x_3)=\mathrm e^{-(s+t)}x_3$. The true system $f(\boldsymbol{x},t)=
 \int\beta(s,t)[F_1(s,t,x_1)+F_2(s,t,x_2)+F_3(s,t,x_3)]ds$. We generate $y_i(t)=f(\boldsymbol{x}_i,t)+\varepsilon_i(t)$, where $\varepsilon_i(t)\sim\mathrm{N}(0,0.1^2\mathrm{I}_y)$, $i=1,\cdots,n$. We set $\boldsymbol{x}^\star=(x_1^\star,x_2^\star,x_3^\star)$  and the desired output $y^\star=f(\boldsymbol{x}^\star)$, where $x_1^\star=\mathrm{cos}(\pi/(1+\mathrm{sin}(\mathrm e^s+\pi s)^2))$, $x_2^\star=\mathrm{sin}(\pi(1+\mathrm{sin}(s+\pi s)^2))$, and $x_3^\star=\mathrm{cos}(2\pi(1+\mathrm{sin}(\mathrm e^s+\pi s)^2))$.
 
