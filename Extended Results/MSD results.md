@@ -1,4 +1,4 @@
-## The Mean Standard Deviation (MSD) Results
+## The mean standard deviation (MSD) results
 
 <table class="tg"><thead>
   <tr>
