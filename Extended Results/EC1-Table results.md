@@ -1,4 +1,4 @@
-# Table Results in Scenario EC1
+# Table results of the 1-D linear model
 
 <div style="text-align: center;">
 <table class="tg"><thead>
