@@ -1,8 +1,8 @@
-## The mean standard deviation (MSD) results
+## The mean of uncertainty quantification (MUQ) results
 
 <table class="tg"><thead>
   <tr>
-    <th class="tg-0pky" colspan="8">Table EC10: The Mean Standard Deviation (MSD) of 50 replicates for different methods.</th>
+    <th class="tg-0pky" colspan="8">Table EC10: The Mean of Uncertainty Quantification (MUQ) of 50 replicates for different methods.</th>
   </tr></thead>
 <tbody>
   <tr>
