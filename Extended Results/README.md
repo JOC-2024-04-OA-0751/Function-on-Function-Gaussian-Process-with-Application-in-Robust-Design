@@ -28,7 +28,7 @@ The `1-D linear-table results` file includes four tables for the 1-D linear mode
 | Table Name        | Description                             |
 | ---------------- | --------------------------------------- |
 | Table EC1   | The MSE ($\times 10^{-1}$) for different kernels with $n=50$|
-| Table EC2   | The MMSE (standard deviation) of the testing set of 50 replicates|
+| Table EC2   | The MMSE (SD-MSE) of the testing set of 50 replicates|
 | Table EC3   | The optimization results with $n=10$ and $n=50$|
 | Table EC4   | The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization|
 | Table EC5   | The MSE for different settings of $\tau_x$ and $\tau_y$ with $n=50$|
@@ -55,7 +55,7 @@ The `3-D nonlinear-table results` file contains four tables for the 3-D nonlinea
 | Table Name        | Description                             |
 | ---------------- | --------------------------------------- |
 | Table EC6   | The MSE for different kernels with $n=150$|
-| Table EC7   | The MMSE (standard deviation) of the testing set of 50 replicates|
+| Table EC7   | The MMSE (SD-MSE) of the testing set of 50 replicates|
 | Table EC8   | The optimization results with $n=30$ and $n=150$|
 | Table EC9   | The Mean Runtime (s) of 50 replicates for different methods for training and the runtime (s) for robust optimization|
 
