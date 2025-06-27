@@ -68,8 +68,8 @@ The `3-D nonlinear-table results` file contains four tables for the 3-D nonlinea
 | `Figure EC4`   | The absolute error of optimal input and output estimated by different methods with $n=150$|
 
 
-## `MSD results`
-The `MSD results` file contains the table of the mean standard deviation (MSD) of 50 replicates for different methods for the 1-D nonlinear model, the 1-D linear model, and the 3-D nonlinear model.
+## `MUQ results`
+The `MUQ results` file contains the table of the mean of uncertainty quantification (MUQ) of 50 replicates for different methods for the 1-D nonlinear model, the 1-D linear model, and the 3-D nonlinear model.
 
 
 ## Robust Optimization Analysis
